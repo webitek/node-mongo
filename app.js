@@ -4,8 +4,8 @@ var express = require('express'),
 
     // MongoClient = require('mongodb').MongoClient,
     // ObjectID = require('mongodb').ObjectID,
-    db = require('./db'),
-    //artistsController = require('./controllers/artists'),
+    // db = require('./db'),
+    artistsController = require('./controllers/artists'),
 
     mongoose = require('mongoose'),
     //Schema = mongoose.Schema,
@@ -14,13 +14,13 @@ var express = require('express'),
     pages = require('./data/pages.json'),
     posts = require('./data/posts.json'),
     bodyParser = require('body-parser'),
-    fs = require('fs'),
-    url = require('url'),
+    // fs = require('fs'),
+    // url = require('url'),
     nav = {
         pages: pages,
         posts: posts
     },
-    pageSchema = require('./models/artists');
+    homeModel = require('./models/banner');
 
 app.set('views', './views/');
 app.set('view engine', 'jade');
@@ -29,44 +29,62 @@ app.use(bodyParser.urlencoded({ extended: true }));//для работы с POST
 
 
 
+app.post('/blog', function(req, res) {
+    console.log(req.body.comment);
+    res.redirect('index');
+});
+
 // app.get('/', artistsController.all);
 app.get('/', function (req, res) {
+    /*
+    homeModel.find(function(err, elem) {
+        // console.log(elem[0].name);
+        console.log(elem);
 
-    pageSchema.find(function(err, elem) {
-        console.log(elem); // { name: 'Sam' }
-    });
 
-    res.render('index', {
-        title: 'API',
-        nav: nav
-    });
-
-});
-
-app.get('/:page', function (req, res, next) {
-
-    var page = req.params.page;
-    if(page == 'blog'){
-        res.render('blog', {
-            nav: nav
+        res.render('index', {
+            title: 'API',
+            nav: nav,
+            elem: elem,
         });
-    }else{
-        next();
-    }
+    });
+    */
+    homeModel.find(function (err, doc){
+        // console.log(doc[0].photo);
+        res.render('index', {
+            title: 'API',
+            nav: nav,
+            doc: doc
+        });
+    });
 });
 
-/*app.get('/:id', function (req, res, next) {
-    var page = req.params.id;
 
-    var result = pages.find(function (element, index) {
-        if(element.name == page){
-            res.render(element.name, {title: element.name, page: element, nav: nav});
-            return element;
-        }
-    });
 
-    if(result == undefined) next();
-});*/
+// app.get('/:page', function (req, res, next) {
+//
+//     var page = req.params.page;
+//     if(page == 'blog'){
+//         res.render('blog', {
+//             nav: nav
+//         });
+//     }else{
+//         next();
+//     }
+// });
+
+// app.get('/:id', function (req, res, next) {
+//     var page = req.params.id;
+//
+//     var result = pages.find(function (element, index) {
+//         if(element.name == page){
+//             res.render(element.name, {title: element.name, page: element, nav: nav});
+//             return element;
+//         }
+//     });
+//
+//     if(result == undefined) next();
+// });
 
 /*app.get('/blog/:post', function (req, res, next) {
 
@@ -99,5 +117,8 @@ mongoose.connect('mongodb://localhost:27017/myapi',function(err){
     }
     app.listen(3001, function () {
         console.log('API app start');
+        // homeModel.find(function (err, doc){
+        //     console.log(doc[1].age);
+        // });
     });
 });
