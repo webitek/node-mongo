@@ -1,0 +1,38 @@
+- var saving = ['1', '2', '3'];
+- var credit = ['1', '2', '3'];
+- var lang = ['1', '2', '3'];
+
+header.header
+    .container
+
+        .header__lc
+            a.header__logo
+                img(src='')
+
+        .header__rc
+            .header__select
+                a Our Saving Offer
+                ul.header__select__list
+                    - for(var i = 0; i < saving; i++)
+                        li.header__select__item
+                            a
+                                = saving[i]
+
+            .header__select
+                a Our Credit Offer
+                ul.header__select__list
+                    - for(var i = 0; i < credit; i++)
+                        li.header__select__item
+                            a
+                                = credit[i]
+
+            .header__lang
+                a
+                    img(src='')
+                ul.header__lang__list
+                    - for(var i = 0; i < lang; i++)
+                        li.header__lang__item
+                            a
+                                = lang[i]
+
+            button Login e-Banking

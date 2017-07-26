@@ -1,0 +1,19 @@
+- var footerNav = ['Our Products', 'Contact', 'About us'];
+
+footer.footer
+    .container
+        .row
+            .col-4.footer__lc
+                p.footer__copyright © ProCredit Group
+
+            .col-8.footer__rc
+                ul
+                    - for(var i = 0; i < footerNav; i++)
+                        li
+                            a(href='#')
+                                = footerNav[i]
+
+.fix-label
+    img(src='#')
+
+include ./scripts

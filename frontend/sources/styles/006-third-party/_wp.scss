@@ -1,0 +1,21 @@
+.wp-caption {
+	width: auto!important;
+}
+
+.alignright,
+.alignleft,
+.aligncenter {
+	width: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+
+.alignright {
+	margin-left: 1em;
+	float: right;
+}
+
+.alignleft {
+	margin-right: 1em;
+	float: left;
+}
