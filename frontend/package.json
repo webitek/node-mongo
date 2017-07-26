@@ -4,7 +4,8 @@
   "description": "Grants4Apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"node ../app.js\" \"gulp\" "
   },
   "author": "Roman Fomenko",
   "license": "ISC",
@@ -28,5 +29,8 @@
     "imagemin-pngquant": "^5.0.0",
     "path": "^0.12.7",
     "stylus": "^0.54.5"
+  },
+  "dependencies": {
+    "concurrently": "^3.5.0"
   }
 }
