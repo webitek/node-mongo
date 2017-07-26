@@ -1,13 +1,38 @@
 @font-face {
-  font-family: "HelveticaRegular"; // 400
-  src: url("../fonts/HelveticaNeue/Regular/HelveticaNeueCyr-Roman.otf");
-}
-@font-face {
-  font-family: "HelveticaBold"; // 700
-  src: url("../fonts/HelveticaNeue/Bold/HelveticaNeueCyr-Bold.otf");
-}
-@font-face {
-  font-family: "LucidaGrande"; // 700
-  src: url("../fonts/LucidaGrande/LucidaGrande.ttf");
+  font-family: "Geometria";
+  src: url("../fonts/geometria/light/Geometria-Light.eot");
+  src: url("../fonts/geometria/light/Geometria-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/light/Geometria-Light.woff2") format("woff2"), url("../fonts/geometria/light/Geometria-Light.woff") format("woff"), url("../fonts/geometria/light/Geometria-Light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300
 }
 
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/geometria/regular/Geometria.eot");
+  src: url("../fonts/geometria/regular/Geometria.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/regular/Geometria.woff2") format("woff2"), url("../fonts/geometria/regular/Geometria.woff") format("woff"), url("../fonts/geometria/regular/Geometria.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/geometria/medium/Geometria-Medium.otf.otf") format("opentype"), url("../fonts/geometria/medium/geometria-medium.woff") format("woff");
+  font-style: normal;
+  font-weight: 500
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/geometria/bold/Geometria-Bold.eot");
+  src: url("../fonts/geometria/bold/Geometria-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/bold/Geometria-Bold.woff2") format("woff2"), url("../fonts/geometria/bold/Geometria-Bold.woff") format("woff"), url("../fonts/geometria/bold/Geometria-Bold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 700
+}
+
+@font-face {
+  font-family: "Geometria";
+  src: url("../fonts/geometria/extra-bold/Geometria-ExtraBold.eot");
+  src: url("../fonts/geometria/extra-bold/Geometria-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../fonts/geometria/extra-bold/Geometria-ExtraBold.woff2") format("woff2"), url("../fonts/geometria/extra-bold/Geometria-ExtraBold.woff") format("woff"), url("../fonts/geometria/extra-bold/Geometria-ExtraBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 800
+}

@@ -1,0 +1,13 @@
+.map-section{
+  &__title{
+    @extend .t_text-align--center;
+    @extend .t_h1;
+  }
+  .gm-style{
+    .gm-style-iw{
+      overflow: visible;
+    }
+  }
+}
+
+

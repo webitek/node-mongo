@@ -1,0 +1,116 @@
+
+mixin callback(title)
+  section.callback
+    .container
+      if(title)
+        .callback__title=title
+      .callback__text
+        p Дзвонiть: 044 22 330 22
+        p Пишіть:
+          a.link(href="mailto:buy@welcome-home.com.ua")=" buy@welcome-home.com.ua"
+      img.callback__img(src="img/callback.png")
+      a(href="#").callback__btn.btn.btn_default.btn_red.callback-popup_open Замовити дзвінок
+
+mixin selectFlat(title, commerce, commercePlan, planing)
+  .select-flat
+    if(title)
+      p.select-flat__title=title
+    form.select-flat-form(action="#")
+      if(commerce)
+      else
+        .select-flat__row.full-options
+          .col-12.select-flat__col
+            p.select-flat-form__label ТИП ПРИМІЩЕННЯ
+            .select-type
+              input.select-type__input(type="checkbox",id="housing",name="type")
+              label.select-type__label(for="housing") Житлове
+
+              input.select-type__input(type="checkbox",id="commercial",name="type")
+              label.select-type__label(for="commercial") Комерційне
+
+      .select-flat__row.full-options
+        .col-md-4.select-flat__col
+          .selects-block
+            label.select-flat-form__label(for="house") БУДИНОК
+            select.select-menu(name="house",class="select-house")
+              option.selected Всі
+              option 1
+              option 2
+              option 3
+              option 4
+
+        .col-md-4.select-flat__col
+          .selects-block
+            label.select-flat-form__label(for="section") СЕКЦІЯ
+            select(name="section",class="select-section")
+              option.selected Всі
+              option 1
+              option 2
+              option 3
+              option 4
+
+        .col-md-4.select-flat__col
+          label.select-flat-form__label(for="floor") ПОВЕРХ
+          input(type="text",class="floor",readonly)
+          .range-floor.slider-range
+
+      .select-flat__row
+
+        .col-md-3.select-flat__col
+          p.select-flat-form__label Кількість кімнат
+
+          ul.select-rooms
+            -for(var i = 1; i < 5; i++)
+              if(commerce)
+                if(commercePlan)
+                  if(i == 4)
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms_commerce-plan" + i,name="rooms_commerce-plan" + i)
+                      label.select-rooms__label(for="rooms_commerce-plan" + i)=i + "+"
+                  else
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms_commerce-plan" + i,name="rooms_commerce-plan" + i)
+                      label.select-rooms__label(for="rooms_commerce-plan" + i)=i
+                else
+                  if(i == 4)
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms_commerce" + i,name="rooms_commerce" + i)
+                      label.select-rooms__label(for="rooms_commerce" + i)=i + "+"
+                  else
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms_commerce" + i,name="rooms_commerce" + i)
+                      label.select-rooms__label(for="rooms_commerce" + i)=i
+              else
+                if(planing)
+                  if(i == 4)
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms-plan" + i,name="rooms-plan")
+                      label.select-rooms__label(for="rooms-plan" + i)=i + "+"
+                  else
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms-plan" + i,name="rooms-plan")
+                      label.select-rooms__label(for="rooms-plan" + i)=i
+                else
+                  if(i == 4)
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms" + i,name="rooms")
+                      label.select-rooms__label(for="rooms" + i)=i + "+"
+                  else
+                    li.select-rooms__item
+                      input.select-rooms__input(type="checkbox",id="rooms" + i,name="rooms")
+                      label.select-rooms__label(for="rooms" + i)=i
+
+        .col-md-3.select-flat__col
+          label.select-flat-form__label(for="area") Загальна площа
+          input(type="text",class="area",readonly)
+          .range-area.slider-range
+
+        .col-md-3.select-flat__col
+          label.select-flat-form__label(for="price") Ціна
+          input(type="text",class="price",readonly)
+          .range-price.slider-range
+
+        .col-md-3.select-flat__col
+          a.link_underline.select-flat-form__more-option(href="#") Ще параметри
+          input.select-flat-form__submit.btn.btn_default.btn_red(type="submit", value="Підібрати (345)")
+

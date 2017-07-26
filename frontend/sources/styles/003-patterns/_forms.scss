@@ -1,0 +1,357 @@
+label{
+  cursor: pointer;
+}
+.require{
+  &:after{
+    content: '*';
+    color: #e34323;
+    display: inline-block;
+    vertical-align: top;
+  }
+}
+/************************************************/
+/************Залишайся в курсі*******************/
+/************************************************/
+.follow-form{
+  border-radius: 5px;
+  border: 4px solid #eee8da;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 35px 35px 0;
+  height: 91px;
+  &__email{
+    width: 100%;
+    padding: 0 32px 0;
+    &::placeholder{
+      color: color('black', 1);
+    }
+  }
+  &__submit{
+    margin-right: 80px;
+  }
+}
+
+/************************************************/
+/************Підбирай квартиру*******************/
+/************************************************/
+.select-flat-form{
+  display: flex;
+  flex-direction: column;
+  &__label{
+    padding:0 0 10px;
+    display: block;
+    color: #8a8a8a;
+    @include font-size(16);
+    text-transform: uppercase;
+  }
+  &__more-option{
+    float: right;
+    letter-spacing: -1px;
+  }
+  &__submit{
+    margin-top: 55px;
+  }
+
+}
+
+//range-slider
+.slider-range{
+  height: 6px;
+  background-color: #d7d1c4;
+  margin-top: 25px;
+}
+.ui-slider{
+  .ui-slider-range{
+    height: 6px;
+    border-radius: 3px;
+    background-color: color('red', 1);
+  }
+  .ui-slider-handle{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: color('red', 1);
+    outline: none;
+  }
+}
+
+.select-rooms{
+  display: flex;
+  justify-content: space-around;
+  border: 1px solid #bfbfbf;
+  max-width: 225px;
+  border-radius: 4px;
+  overflow: hidden;
+  &__item{
+    border-left: 1px solid #bfbfbf;
+    width: 100%;
+    text-align: center;
+    &:first-of-type{
+      border-left: none;
+    }
+  }
+  &__label{
+    //width: 55px;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: $transition-time;
+    cursor: pointer;
+  }
+  &__input{
+    display: none;
+    &:checked + label{
+      background: #eb5a2d;
+      color: #ffffff;
+    }
+  }
+}
+
+.select-type{
+  &__label{
+    padding: 0 70px 0 32px;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      width: 14px;
+      height: 14px;
+      border-radius: 4px;
+      border: 1px solid #bfbfbf;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+    }
+  }
+  &__input{
+    display: none;
+    &:checked + label{
+      &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+        @extend .i-cheked;
+      }
+    }
+  }
+}
+
+//select
+.ui-selectmenu-button.ui-button{
+  width: 100%;
+  height: 56px;
+  padding: 0 0 0 20px;
+  outline: none;
+  border-radius: 4px;
+  border: 1px solid #bfbfbf;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  //&:hover{
+  //  border-color: color('red', 1);
+  //  .ui-selectmenu-icon.ui-icon{
+  //    border-color: color('red', 1);
+  //  }
+  //}
+  &.ui-selectmenu-button-open{
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    //border-color: color('red', 1);
+    //.ui-selectmenu-icon.ui-icon{
+    //  border-color: color('red', 1);
+    //  &:before{
+    //    transform: rotate(-90deg);
+    //  }
+    //}
+  }
+}
+.ui-selectmenu-icon.ui-icon{
+  height: 100%;
+  width: 60px;
+  border-left: 1px solid #bfbfbf;
+  &:before{
+    content: '';
+    display: block;
+    @extend .i-arrow-black;
+    @extend .u_overlay;
+    margin: auto;
+    transform: rotate(90deg);
+    transition: transform $transition-time;
+    padding: 9px 0;
+  }
+}
+.ui-selectmenu-menu{
+  .ui-menu{
+    border: 1px solid #bfbfbf;
+    border-top: none;
+    background-color: #ffffff;
+    .ui-menu-item-wrapper{
+      padding: 9px 20px;
+      &.ui-state-active{
+        margin: 0;
+        color: color('red', 1);
+      }
+    }
+  }
+}
+.ui-front {
+  z-index: 999999;
+}
+
+.ui-timepicker-list{
+  background-color: #ffffff;
+  li{
+    padding: 9px 20px;
+    &:hover,
+    &.ui-timepicker-selected,
+    &.ui-timepicker-selected:hover{
+      color: #eb5a2d;
+      background: transparent;
+    }
+  }
+}
+
+/************************************************/
+/************Замовити дзвінок********************/
+/************************************************/
+.reserv-form,
+.callback-form{
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  &__label{
+    @include font-size(16);
+    margin: 15px 0 20px;
+    display: block;
+  }
+  &__input{
+    width: 355px;
+    height: 56px;
+    border-radius: 4px;
+    border: 1px solid #bfbfbf;
+    padding: 10px 20px;
+    //@include font-size(16);
+    //margin: 10px 0;
+    &::placeholder{
+      color: #bfbfbf;
+    }
+    &.error{
+      border-color: color('red', 1);
+    }
+  }
+  &__submit{
+    max-width: 235px;
+    margin: 25px auto 0;
+    font-weight: $weight-medium;
+  }
+}
+
+/************************************************/
+/************Записатись на перегляд**************/
+/************************************************/
+.review-form{
+  display: flex;
+  flex-direction: column;
+  max-width: 660px;
+  &__row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 660px;
+  }
+  &__input-wrap{
+    flex: 0 1 45%;
+    position: relative;
+  }
+
+  &__label{
+    @include font-size(16);
+  }
+  &__input{
+    margin: 10px 0;
+    width: 100%;
+    height: 56px;
+    border-radius: 4px;
+    border: 1px solid #bfbfbf;
+    padding: 10px 20px;
+    //@include font-size(16);
+    position: relative;
+    &::placeholder{
+      color: #bfbfbf;
+    }
+    &.error{
+      border-color: color('red', 1);
+    }
+  }
+  &__timepicker-wrap{
+    width: 196px;
+    position: relative;
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      height: 56px;
+      width: 60px;
+      border-left: 1px solid #bfbfbf;
+      margin: auto 0;
+    }
+    &:after{
+      content: '';
+      display: block;
+      @extend .i-arrow-black;
+      position: absolute;
+      right: 23px;
+      top: 30px;
+      margin: auto;
+      transform: rotate(90deg);
+      transition: transform $transition-time;
+      padding: 9px 0;
+    }
+    &.open{
+      &:after{
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &__submit{
+    max-width: 235px;
+    margin: 15px auto 0;
+    font-weight: $weight-medium;
+  }
+  p{
+    margin: 0;
+  }
+}
+#review-sales-office-button{
+  margin: 10px 0;
+}
+body{
+  div.wpcf7-response-output{
+    margin: 0;
+    padding: 0;
+    @include font-size(16);
+  }
+  div.wpcf7-validation-errors{
+    border: none;
+  }
+  div.wpcf7 .ajax-loader{
+    display: block;
+    margin: 10px auto;
+  }
+  div.wpcf7-mail-sent-ok{
+    border: none;
+  }
+}

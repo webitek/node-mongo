@@ -1,0 +1,82 @@
+.contacts-map {
+  &__title {
+    @include font-size(36);
+    text-align: center;
+    font-weight: 600;
+    margin: 29px 0 40px 0;
+  }
+  margin-bottom: 42px;
+}
+
+.contact-marker{
+  width: 394px;
+  box-shadow: 0 20px 50px rgba(51, 51, 51, 0.15);
+  background-color: #fff;
+  padding: 9px 40px 44px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  bottom: 15px;
+  &:after{
+    content: '';
+    position: absolute;
+    top: -35px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    height: 45px;
+    width: calc(100% - 16px);
+    background: url(../img/combined-shape.svg) top center;
+    background-size: 100%;
+  }
+  &:before {
+    content: '';
+    width: 66px;
+    border-top: 22px solid #ffffff;
+    border-right: 33px solid transparent;
+    border-bottom: 22px solid transparent;
+    border-left: 33px solid transparent;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -38px;
+    margin: 0 auto;
+  }
+  &__wrap{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__group{
+    flex: 0 1 50%;
+    max-width: 50%;
+    text-align: left;
+    margin-bottom: 24px;
+    &:last-of-type{
+      padding-left: 47px;
+    }
+  }
+  &__title{
+    color: color('black', 1);
+    @include font-size(20);
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+  &__text{
+    color: color('black', 1);
+    @include font-size(12);
+    font-weight: 500;
+    display: block;
+    margin: 9px 0 10px;
+  }
+  &__up-text{
+    color: color('black', 1);
+    @include font-size(16);
+    margin: 0;
+    &.link{
+      color: color('red', 1);
+    }
+  }
+  &__link{
+    @include font-size(14);
+  }
+}

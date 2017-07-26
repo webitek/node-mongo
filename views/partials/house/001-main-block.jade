@@ -1,0 +1,25 @@
+section.info-section
+  .container
+    include ../global/callback-button
+    h1.info-section__title Welcome Home на Ревуцького
+    .info-section__sub-title-block
+      p Здається у квітні 2018 року
+      a(href="#").link_underline Хід будівництва
+    .info-section__offers
+      span.offer-btn Кредит від 1,9 %
+      span.offer-btn Розсрочка
+    .row
+      .house-slider
+        .ribbon-horiz.ribbon-horiz_green.ribbon-horiz_big У продажу
+        .house-slider__for
+          -for(var i = 0; i < 2; i++)
+            .house-slider__for-item
+              img.js-img-center(src='img/house/house-img-1.jpg')
+            .house-slider__for-item
+              img.js-img-center(src='img/house/house-img-2.jpg')
+        .house-slider__nav
+          -for(var i = 0; i < 2; i++)
+            .house-slider__nav-item
+              img.js-img-center(src='img/house/house-img-1.jpg')
+            .house-slider__nav-item
+              img.js-img-center(src='img/house/house-img-2.jpg')

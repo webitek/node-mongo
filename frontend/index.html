@@ -1,66 +1,443 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ProCredit Bank</title>
+    <title>Welcome home</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+    <meta name="viewport">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="format-detection" content="telephone=no">
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="css/core.css">
+    <!--content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no"-->
   </head>
   <body>
-    <div class="svg-sprite"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 32 32" id="twitter" xmlns="http://www.w3.org/2000/svg"><path d="M31.993 6.077a13.027 13.027 0 0 1-3.77 1.033 6.588 6.588 0 0 0 2.887-3.63 13.144 13.144 0 0 1-4.168 1.592A6.56 6.56 0 0 0 22.149 3a6.562 6.562 0 0 0-6.562 6.563c0 .514.057 1.016.169 1.496-5.455-.274-10.291-2.887-13.529-6.858a6.544 6.544 0 0 0-.888 3.3 6.564 6.564 0 0 0 2.919 5.464 6.544 6.544 0 0 1-2.972-.821l-.001.082a6.568 6.568 0 0 0 5.265 6.437 6.606 6.606 0 0 1-2.963.113 6.572 6.572 0 0 0 6.13 4.558 13.166 13.166 0 0 1-8.15 2.811c-.53 0-1.053-.031-1.566-.092A18.592 18.592 0 0 0 10.062 29c12.072 0 18.675-10.001 18.675-18.675 0-.284-.008-.568-.02-.85a13.315 13.315 0 0 0 3.276-3.398z" fill="#fff"/></symbol></svg>
+    <div class="svg-sprite"><?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol viewBox="0 0 11.44 18" id="arrow-black" xmlns="http://www.w3.org/2000/svg"><path fill="none" stroke="#333" stroke-linecap="round" stroke-miterlimit="50" stroke-width="2" d="M1.22 1l8.27 7.86L1.22 17"/></symbol><symbol viewBox="0 0 141 100" id="logo" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><path d="M75.136 1.112a10.481 10.481 0 0 0-9.273 0L5.76 30.95C2.207 32.714 0 36.266 0 40.22v48.897c0 5.711 4.664 10.358 10.396 10.358h120.207c5.732 0 10.396-4.647 10.396-10.358V40.221c0-3.955-2.207-7.507-5.76-9.27L75.137 1.11z" fill="#EB5A2D"/><path fill="#FFFFFE" d="M29.155 52.27l-.538 2.018-.36-2.018-3.769-10.706h-3.667l1.872 5.034-2.256 5.672-.54 2.018-.358-2.018-3.77-10.706h-4.102l1.666 3.169 5.104 13.72 2.333.51 3.385-8.456 3 7.945 2.333.511 6.847-17.399H33.13L29.155 52.27M38.822 58.631h9.154l.642-2.53h-6.462v-4.955h4.77l.64-2.53h-5.41v-4.522h6.128v-2.53h-9.82l.358 2.632V58.63M62.157 58.631l.64-2.58H56.26V41.563h-3.692l.359 2.632V58.63h9.231M77.106 53.956c-1.487 1.584-3.436 2.401-5.18 2.401-2.769 0-5.333-2.171-5.333-6.157 0-3.423 2.18-6.412 5.077-6.412 1.512 0 3.051.587 4.487 2.044l1.36-2.454c-1.642-1.455-3.565-2.12-5.873-2.12-4.795 0-8.513 3.807-8.513 9.198 0 5.646 4.077 8.507 8.308 8.507 2.18 0 4.667-.894 6.283-2.376l-.616-2.631M87.004 56.485c-2.719 0-4.539-2.708-4.539-6.361 0-3.654 1.82-6.362 4.539-6.362 2.718 0 4.513 2.708 4.513 6.362 0 3.653-1.795 6.36-4.513 6.36zm.128-15.176c-4.667 0-8.206 3.884-8.206 8.968 0 4.88 2.846 8.686 7.873 8.686 4.666 0 8.257-3.883 8.257-8.993 0-5.058-2.641-8.661-7.924-8.661zM115.81 41.564h-2.23l-6.539 10.144-7.154-10.144h-2.64l.358 2.632V58.63h3.231l-.282-2.197v-8.38l.846 1.66 5.36 7.333 4.974-7.333.744-1.635v10.552h3.615l-.282-2.197v-14.87M122.87 51.146h4.77l.64-2.53h-5.41v-4.522H129v-2.53h-9.821l.358 2.632V58.63h9.155l.641-2.53h-6.462v-4.955M62.92 79.161c-2.719 0-4.539-2.708-4.539-6.362 0-3.653 1.82-6.361 4.539-6.361 2.718 0 4.513 2.708 4.513 6.361 0 3.654-1.795 6.362-4.513 6.362zm.128-15.175c-4.667 0-8.206 3.883-8.206 8.967 0 4.88 2.847 8.686 7.872 8.686 4.667 0 8.258-3.883 8.258-8.993 0-5.058-2.641-8.66-7.924-8.66zM92.716 64.24h-2.23l-6.54 10.144-7.154-10.143h-2.64l.358 2.631v14.435h3.231l-.282-2.197v-8.38l.846 1.661 5.36 7.332 4.974-7.332.744-1.635v10.551h3.615l-.282-2.197V64.24M101.512 73.821h4.77l.64-2.529h-5.41V66.77h6.128v-2.53h-9.82l.358 2.632v14.435h9.155l.64-2.53h-6.461v-4.956M51.586 64.24h-3.693l.36 2.632v4.8l-4.048-2.043-3.953 1.997V64.24h-3.693l.36 2.631v14.435h3.615l-.282-2.197v-4.318l3.953-1.996 4.047 2.043v6.468h3.616l-.282-2.197V64.24"/></g></symbol></svg>
     </div>
     <header class="header">
-      <div class="container">
-        <div class="header__lc"><a class="header__logo"><img src=""></a></div>
-        <div class="header__rc">
-          <div class="header__select"><a>Our Saving Offer</a>
-            <ul class="header__select__list">
-            </ul>
+      <div class="pre-header">
+        <div class="container">
+          <div class="row">
+            <div class="lang-select"><span class="lang-select__selected">укр
+                <svg width="6px" height="6px" class="lang-select__selected-icon">
+                  <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-black"></use>
+                </svg></span>
+              <ul class="lang-select__list">
+                <li>рус</li>
+                <li>en</li>
+              </ul>
+            </div><a href="tel:0442203022" class="header__tel"><span class="header__tel-label">центральний офіс:</span>044 22 030 22</a>
           </div>
-          <div class="header__select"><a>Our Credit Offer</a>
-            <ul class="header__select__list">
-            </ul>
+        </div>
+      </div>
+      <div class="header-wrap">
+        <div class="container">
+          <div class="row">
+            <!--a(href="#").logo
+            svg(width="141px", height="99px")
+                use(xmlns:xlink="http://www.w3.org/1999/xlink", xlink:href="#logo")
+            --><a href="#" class="header__logo i-logo"></a>
+            <nav class="nav">
+              <ul class="nav__list">
+                <li class="nav__list-item"><a href="#">про нас</a></li>
+                <li class="nav__list-item"><a href="#">будинки</a></li>
+                <li class="nav__list-item"><a href="#">квартири</a></li>
+                <li class="nav__list-item"><a href="#">ідеї комфорту</a></li>
+                <li class="nav__list-item"><a href="#">купити</a></li>
+                <li class="nav__list-item"><a href="#">контакти</a></li>
+              </ul>
+            </nav>
+            <div class="register-look"><a href="#" class="link_underline review-popup_open">Записатись на перегляд</a></div>
           </div>
-          <div class="header__lang"><a><img src=""></a>
-            <ul class="header__lang__list">
-            </ul>
-          </div>
-          <button>Login e-Banking</button>
         </div>
       </div>
     </header>
-    <section class="hero-wrap">
-      <div class="container">
-        <div class="row">
-          <div class="col-8 hero-wrap__lc"><img src="#" class="hero-wrap__img"></div>
-          <div class="col-4 hero-wrap__rc">
-            <h1 class="hero-wrap__title">ProCredit Bank Direct, the Bank made simple.</h1>
-            <p class="hero-wrap__text">The first German Bank in Eastern Europe goes digital. Safe and convenient banking in 13 countries and your direct link to Europe.</p><a href="#" class="hero-wrap__btn">Open Your Account</a>
+    <div class="global-wrap">
+      <section class="main-banner">
+        <p class="main-banner__title">Ласкаво просимо додому</p>
+        <div class="main-banner__watch"><a href="#" class="video-popup_open">
+            <div class="main-banner__watch-icon play-icon"></div>
+            <p>Дивитись відео про WELCOME HOME</p></a>
+          <!--iframe(width='800', height='400', src='https://www.youtube.com/embed/JGwWNGJdvx8?list=RDQMzKzh5mnfz5c', frameborder='0', allowfullscreen='')-->
+          <!--iframe#video(src='//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1&html5=1', frameborder='0', allowfullscreen='')-->
+          
+        </div>
+      </section>
+      <div id="video-popup">
+        <div id="pause-button" class="popup-close video-popup_close"></div>
+        <iframe id="video" width="800" height="400" src="//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1&amp;html5=1" frameborder="0" allowfullscreen=""></iframe>
+        <script>
+          var player;
+          function onYouTubePlayerAPIReady() {
+              player = new YT.Player('video', {
+                  events: {
+                      'onReady': onPlayerReady
+                  }
+              });
+          }
+          
+          function onPlayerReady(event) {
+              var pauseButtonWrapper = document.getElementById("video-popup_wrapper");
+              var pauseButton = document.getElementById("pause-button");
+              pauseButton.addEventListener("click", function () { player.pauseVideo(); });
+              pauseButtonWrapper.addEventListener("click", function () { player.pauseVideo(); });
+          }
+          var tag = document.createElement('script');
+          tag.src = "//www.youtube.com/player_api";
+          var firstScriptTag = document.getElementsByTagName('script')[0];
+          firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        </script>
+      </div>
+      <section class="news-slider-section">
+        <div class="container">
+          <div class="callback-button">
+            <!--.i-call-back-->
+            <div class="callback-button__icon callback-popup_open"></div>
+          </div>
+          <div>
+            <div class="news-slider-wrap">
+              <div class="news-slider">
+                <div class="news-slider__item">
+                  <div class="news-slider__item-wrap"><img src="img/news-slide.png" class="news-slider__item-img">
+                    <div class="news-slider__item-text">
+                      <p class="news-slider__item-title">Нові поверхи на Ревуцького
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-slider__item">
+                  <div class="news-slider__item-wrap"><img src="img/news-slide.png" class="news-slider__item-img">
+                    <div class="news-slider__item-text">
+                      <p class="news-slider__item-title">Нові поверхи на Ревуцького 2
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-slider__item">
+                  <div class="news-slider__item-wrap"><img src="img/news-slide.png" class="news-slider__item-img">
+                    <div class="news-slider__item-text">
+                      <p class="news-slider__item-title">Нові поверхи на Ревуцького 3
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="news-slider__item">
+                  <div class="news-slider__item-wrap"><img src="img/news-slide.png" class="news-slider__item-img">
+                    <div class="news-slider__item-text">
+                      <p class="news-slider__item-title">Нові поверхи на Ревуцького 4
+                      </p>
+                    </div>
+                  </div>
+                </div><a href="#" class="news-slider__link-all link_underline">Переглянути всі</a>
+              </div>
+              <div class="ribbon-wrapper">
+                <div class="ribbon">Акції та новини</div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="advantage">
+        <div class="container">
+          <h1 class="advantage__title">WELCOME HOME</h1>
+          <p class="advantage__sup-title">це мережа будинків створених за стандартами комфорту</p>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="advantage__item col-3">
+              <div class="advantage__item-img-wrap"><img src="img/advantage-1.png" class="advantage__item-img"></div>
+              <div class="advantage__item-text">
+                <p>Оптимальні планування, з можливістю перепланувань</p>
+              </div>
+            </div>
+            <div class="advantage__item col-3">
+              <div class="advantage__item-img-wrap"><img src="img/advantage-2.png" class="advantage__item-img"></div>
+              <div class="advantage__item-text">
+                <p>Еколавка зі свіжими продуктами в кожному будинку</p>
+              </div>
+            </div>
+            <div class="advantage__item col-3">
+              <div class="advantage__item-img-wrap"><img src="img/advantage-3.png" class="advantage__item-img"></div>
+              <div class="advantage__item-text">
+                <p>Енергозберігаючі матеріали для економії на комунальних послугах</p>
+              </div>
+            </div>
+            <div class="advantage__item col-3">
+              <div class="advantage__item-img-wrap"><img src="img/advantage-4.png" class="advantage__item-img"></div>
+              <div class="advantage__item-text">
+                <p>Відеоспостереження та тривожні кнопки у всіх під*їздах</p>
+              </div>
+            </div><a href="#" class="btn btn_default advantage__link">Читати детальніше</a>
+          </div>
+        </div>
+      </section>
+      <section class="map-section">
+        <p class="map-section__title">Обирай свій район</p>
+        <div id="map"></div>
+      </section>
+      <script src="./js/google.map.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBItuYunOjZhdJsHOEt5bmfuNLkbw0FXbg&amp;callback=init"></script>
+      <section class="select-flat-section">
+        <div class="container">
+          <div class="row">
+                  <div class="select-flat">
+                    <p class="select-flat__title">Підбирай квартиру</p>
+                    <form action="#" class="select-flat-form">
+                      <div class="select-flat__row full-options">
+                        <div class="col-12 select-flat__col">
+                          <p class="select-flat-form__label">ТИП ПРИМІЩЕННЯ</p>
+                          <div class="select-type">
+                            <input type="checkbox" id="housing" name="type" class="select-type__input">
+                            <label for="housing" class="select-type__label">Житлове</label>
+                            <input type="checkbox" id="commercial" name="type" class="select-type__input">
+                            <label for="commercial" class="select-type__label">Комерційне</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="select-flat__row full-options">
+                        <div class="col-md-4 select-flat__col">
+                          <div class="selects-block">
+                            <label for="house" class="select-flat-form__label">БУДИНОК</label>
+                            <select name="house" class="select-menu select-house">
+                              <option class="selected">Всі</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-4 select-flat__col">
+                          <div class="selects-block">
+                            <label for="section" class="select-flat-form__label">СЕКЦІЯ</label>
+                            <select name="section" class="select-section">
+                              <option class="selected">Всі</option>
+                              <option>1</option>
+                              <option>2</option>
+                              <option>3</option>
+                              <option>4</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-4 select-flat__col">
+                          <label for="floor" class="select-flat-form__label">ПОВЕРХ</label>
+                          <input type="text" readonly class="floor">
+                          <div class="range-floor slider-range"></div>
+                        </div>
+                      </div>
+                      <div class="select-flat__row">
+                        <div class="col-md-3 select-flat__col">
+                          <p class="select-flat-form__label">Кількість кімнат</p>
+                          <ul class="select-rooms">
+                            <li class="select-rooms__item">
+                              <input type="checkbox" id="rooms1" name="rooms" class="select-rooms__input">
+                              <label for="rooms1" class="select-rooms__label">1</label>
+                            </li>
+                            <li class="select-rooms__item">
+                              <input type="checkbox" id="rooms2" name="rooms" class="select-rooms__input">
+                              <label for="rooms2" class="select-rooms__label">2</label>
+                            </li>
+                            <li class="select-rooms__item">
+                              <input type="checkbox" id="rooms3" name="rooms" class="select-rooms__input">
+                              <label for="rooms3" class="select-rooms__label">3</label>
+                            </li>
+                            <li class="select-rooms__item">
+                              <input type="checkbox" id="rooms4" name="rooms" class="select-rooms__input">
+                              <label for="rooms4" class="select-rooms__label">4+</label>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="col-md-3 select-flat__col">
+                          <label for="area" class="select-flat-form__label">Загальна площа</label>
+                          <input type="text" readonly class="area">
+                          <div class="range-area slider-range"></div>
+                        </div>
+                        <div class="col-md-3 select-flat__col">
+                          <label for="price" class="select-flat-form__label">Ціна</label>
+                          <input type="text" readonly class="price">
+                          <div class="range-price slider-range"></div>
+                        </div>
+                        <div class="col-md-3 select-flat__col"><a href="#" class="link_underline select-flat-form__more-option">Ще параметри</a>
+                          <input type="submit" value="Підібрати (345)" class="select-flat-form__submit btn btn_default btn_red">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+          </div>
+        </div>
+      </section>
+      <section class="why">
+        <div class="container">
+          <div class="why__row">
+            <p class="why__title">Чому Welcome Home</p>
+            <div class="why-slider">
+              <div class="why-slider__item">
+                <div class="why-slider__item-descript">
+                  <p>Надійність забудовника</p>
+                  <p class="why-slider__item-title">Забудовник Фундамент працює в Києві з 1961 року</p>
+                </div><img src="img/why-slide-1.png" class="why-slider__item-img">
+              </div>
+              <div class="why-slider__item">
+                <div class="why-slider__item-descript">
+                  <p>Надійність забудовника</p>
+                  <p class="why-slider__item-title">Забудовник Фундамент працює в Києві з 1961 року</p>
+                </div><img src="img/why-slide-1.png" class="why-slider__item-img">
+              </div>
+              <div class="why-slider__item">
+                <div class="why-slider__item-descript">
+                  <p>Надійність забудовника</p>
+                  <p class="why-slider__item-title">Забудовник Фундамент працює в Києві з 1961 року</p>
+                </div><img src="img/why-slide-1.png" class="why-slider__item-img">
+              </div>
+              <div class="why-slider__item">
+                <div class="why-slider__item-descript">
+                  <p>Надійність забудовника</p>
+                  <p class="why-slider__item-title">Забудовник Фундамент працює в Києві з 1961 року</p>
+                </div><img src="img/why-slide-1.png" class="why-slider__item-img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+            <section class="callback">
+              <div class="container">
+                <div class="callback__title">З радістю відповімо на ваші запитання</div>
+                <div class="callback__text">
+                  <p>Дзвонiть: 044 22 330 22</p>
+                  <p>Пишіть:<a href="mailto:buy@welcome-home.com.ua" class="link"> buy@welcome-home.com.ua</a></p>
+                </div><img src="img/callback.png" class="callback__img"><a href="#" class="callback__btn btn btn_default btn_red callback-popup_open">Замовити дзвінок</a>
+              </div>
+            </section>
+      <section class="ideas">
+        <div class="container">
+          <p class="ideas__title">Ідеї комфорту</p>
+          <p class="ideas__sub-title">Корисні матеріали по облаштуванню вашої квартир, надихаючі ідеї та поради від дизайн експертів</p>
+          <div class="row ideas__block">
+            <div class="ideas__item"><a href="#" class="ideas__item-link"><img src="img/ideas-1.png" class="ideas__item-img">
+                <div class="ideas__item-descript">
+                  <p>Раціональне зберігання речей</p>
+                </div></a></div>
+            <div class="ideas__item"><a href="#" class="ideas__item-link"><img src="img/ideas-2.png" class="ideas__item-img">
+                <div class="ideas__item-descript">
+                  <p>Як організувати ванну вашої мрії</p>
+                </div></a></div>
+            <div class="ideas__item"><a href="#" class="ideas__item-link"><img src="img/ideas-3.png" class="ideas__item-img">
+                <div class="ideas__item-descript">
+                  <p>Продумуємо вашу гардеробну</p>
+                </div></a></div>
+          </div><a href="#" class="ideas__btn btn btn_large">Переглянути всі</a>
+        </div>
+      </section>
+      <section class="follow">
+        <div class="container">
+          <p class="follow__title">Залишайся в курсі</p>
+          <p class="follow__sub-title">Дізнайтеся першими про старти нових черг, спеціальні пропозиції та інші новини від Welcome Home</p>
+          <form action="#" class="follow-form">
+            <input type="email" placeholder="Введіть вашу електронну пошту" class="follow-form__email">
+            <input type="submit" value="Пiдписатися" class="follow-form__submit link_underline">
+          </form>
+        </div>
+      </section>
+    </div>
     <footer class="footer">
       <div class="container">
-        <div class="row">
-          <div class="col-4 footer__lc">
-            <p class="footer__copyright">© ProCredit Group</p>
-          </div>
-          <div class="col-8 footer__rc">
+        <div class="row footer__wrap">
+          <div class="footer__list">
+            <p class="footer__list-title">Welcome Home</p>
             <ul>
+              <li class="footer__list-item"><a href="#">Ергономіка</a></li>
+              <li class="footer__list-item"><a href="#">Еко-лавки</a></li>
+              <li class="footer__list-item"><a href="#">Забудовник</a></li>
             </ul>
           </div>
-        </div>
+          <div class="footer__list">
+            <p class="footer__list-title">Будинки</p>
+            <ul>
+              <li class="footer__list-item"><a href="#">На Ревуцького</a></li>
+              <li class="footer__list-item"><a href="#">Толбухіна</a></li>
+              <li class="footer__list-item"><a href="#">Бортнічи</a></li>
+            </ul><a href="#" class="footer__list-more"><span>Бiльше</span></a>
+          </div>
+          <div class="footer__logo">
+            <p class="footer__logo-text">ласкаво просимо додому</p><a href="tel:0442233022" class="footer__logo-tel">044 22 330 22</a><a href="mailto:buy@welcome-home.com.ua" class="footer__logo-email">buy@welcome-home.com.ua</a>
+          </div>
+          <div class="footer__list">
+            <p class="footer__list-title">Купити</p>
+            <ul>
+              <li class="footer__list-item"><a href="#">Акції місяця</a></li>
+              <li class="footer__list-item"><a href="#">Пропозиції</a></li>
+              <li class="footer__list-item"><a href="#">Часті запитання</a></li>
+            </ul>
+          </div>
+          <div class="footer__list">
+            <p class="footer__list-title">Квартири</p>
+            <ul>
+              <li class="footer__list-item"><a href="#">Ідеї комфорту</a></li>
+              <li class="footer__list-item"><a href="#">Контакти</a></li>
+            </ul>
+          </div>
+        </div><a href="#up" class="footer__link-up">
+          <svg width="8px" height="16px" class="footer__link-up-icon">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#arrow-black"></use>
+          </svg>Вгору</a>
       </div>
     </footer>
-    <div class="fix-label"><img src="#"></div>
+    <div id="callback-popup" class="callback-popup">
+      <p class="callback-popup__title">Замовити дзвінок</p>
+      <form action="#" class="callback-form">
+        <label for="callback-name" class="callback-form__label require">Введіть ваше ім’я</label>
+        <input type="text" id="callback-name" placeholder="Ім’я" class="callback-form__input required">
+        <label for="callback-phone" class="callback-form__label require">Введіть ваш телефон</label>
+        <input type="text" id="callback-phone" placeholder="+38 (___) ___-__-__" class="callback-form__input required js-phone-mask">
+        <input type="submit" value="Замовити дзвінок" class="callback-form__submit btn btn_red">
+      </form>
+      <div class="callback-popup_close popup-close"></div>
+    </div>
+    <div id="review-popup" class="review-popup">
+      <div class="review-popup__traingle"></div>
+      <p class="review-popup__title">Записатись на перегляд</p>
+      <form action="#" class="review-form">
+        <div class="review-form__row">
+          <div class="review-form__input-wrap">
+            <label for="review-name" class="review-form__label require">Введіть ваше ім’я</label>
+            <input type="text" id="review-name" placeholder="Ім’я" class="review-form__input required">
+          </div>
+          <div class="review-form__input-wrap">
+            <label for="review-email" class="review-form__label">Введіть ваш email</label>
+            <input type="text" id="review-email" placeholder="name@mail.com" class="review-form__input">
+          </div>
+          <div class="review-form__input-wrap">
+            <label for="review-phone" class="review-form__label require">Введіть ваш телефон</label>
+            <input type="text" id="review-phone" placeholder="+38 (___) ___-__-__" class="review-form__input required js-phone-mask">
+          </div>
+          <div class="review-form__input-wrap">
+            <label for="review-time" class="review-form__label">Зручний час для перегляду</label>
+            <div class="review-form__timepicker-wrap">
+              <input type="text" id="review-time" autocomplete="off" placeholder="- -  : - -" class="review-form__input">
+            </div>
+          </div>
+        </div>
+        <input type="submit" value="Записатись" class="review-form__submit btn btn_red">
+      </form>
+      <div class="review-popup_close popup-close"></div>
+    </div>
+    <div id="reserv-popup" class="reserv-popup">
+      <p class="reserv-popup__title">Забронювати</p>
+      <form action="#" class="reserv-form">
+        <label for="reserv-name" class="reserv-form__label require">Введіть ваше ім’я</label>
+        <input type="text" id="reserv-name" placeholder="Ім’я" class="reserv-form__input required">
+        <label for="reserv-email" class="reserv-form__label require">Введіть ваш Email</label>
+        <input type="text" id="reserv-email" placeholder="Email" class="reserv-form__input">
+        <label for="reserv-phone" class="reserv-form__label require">Введіть ваш телефон</label>
+        <input type="text" id="reserv-phone" placeholder="+38 (___) ___-__-__" class="reserv-form__input required js-phone-mask">
+        <input type="submit" value="Забронювати" class="reserv-form__submit btn btn_red">
+      </form>
+      <div class="reserv-popup_close popup-close"></div>
+    </div>
     <script src="./js/libs.min.js"></script>
     <script src="./js/core.min.js"></script>
+    <script src="./js/validate.js"></script>
   </body>
 </html>

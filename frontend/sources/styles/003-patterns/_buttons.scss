@@ -1,0 +1,141 @@
+.slick-arrow{
+  width: 25px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  z-index: 1;
+  &:hover{
+    &:after,
+    &:before{
+      background: color('red', 1);
+    }
+  }
+  &:after,
+  &:before{
+    content: '';
+    width: 6px;
+    height: 29px;
+    position: absolute;
+    background: #f0f0f0;
+    left: 50%;
+    border-radius: 6px;
+    transition: $transition-time;
+  }
+  &:after{
+    bottom: 4px;
+    transform: rotate(-45deg) translate(-50%);
+  }
+  &:before{
+    top: 4px;
+    transform: rotate(45deg) translate(-50%);
+  }
+  &.slick-prev{
+    //left: -150px;
+  }
+  &.slick-next{
+    transform: rotate(180deg);
+  }
+}
+
+.slick-dots{
+  display: flex;
+  li{
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border-radius: 100%;
+    background-color: #f0f0f0;
+    transition: $transition-time;
+    cursor: pointer;
+    &.slick-active{
+      background-color: #eb5a2d;
+    }
+  }
+}
+
+.link{
+  color: color('red', 1);
+  font-weight: $weight-bold;
+  border-bottom: 1px solid transparent;
+  &:hover{
+    border-bottom: 1px solid color('red', 1);
+  }
+  &_underline{
+    color: color('red', 1);
+    font-weight: $weight-bold;
+    border-bottom: 1px solid color('red', 1);
+    transition: $transition-time;
+    padding: 0;
+    &:hover{
+      color: color('red', 2);
+      border-bottom: 1px solid color('red', 2);
+    }
+  }
+}
+
+.btn{
+  width: 100%;
+  height: 59px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid color('red', 1);
+  color: color('red', 1);
+  background: transparent;
+  font-weight: $weight-bold;
+  transition: $transition-time;
+  &:hover{
+    color: #ffffff;
+    //border: 2px solid color('red', 2);
+    background: color('red', 1);
+  }
+  &_default{
+    max-width: 290px;
+  }
+  &_medium{
+    width: 272px;
+  }
+  &_large{
+    max-width: 344px;
+  }
+  &_red{
+    color: #ffffff;
+    background: color('red', 1);
+    &:hover{
+      border-color: color('red', 2);
+      background: color('red', 2);
+    }
+  }
+  &_small{
+    width: auto;
+    height: 29px;
+    border-radius: 4px;
+    display: inline-flex;
+    padding: 0 20px;
+    margin-right: 10px;
+    @include font-size(16);
+    font-weight: $weight-medium;
+  }
+  &_auto{
+    width: auto;
+    padding: 0 25px;
+  }
+}
+
+.offer-btn{
+  width: 192px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid #979797;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3b3a52;
+  background: transparent;
+  margin: 0 5px;
+}
+
+

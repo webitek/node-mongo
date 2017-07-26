@@ -1,0 +1,53 @@
+-var houseCard = []
+
+section.houses
+  .container
+    include ../global/callback-button
+    h1.houses__title Будинки WELCOME HOME
+    .tabs.tabs-red
+      ul.tabs__caption.tabs-red__caption
+        li.tabs-red__caption-item.active Список
+        li.tabs-red__caption-item Карта
+
+      .tabs__content.tabs-red__content.active
+        .row
+          -for(var i = 1; i <= 4; i++)
+            .house-card-wrap
+              .house-card
+                if(i%2 == 0)
+                  .ribbon-horiz.ribbon-horiz_yellow.ribbon-horiz_small Заселенний
+                  .house-card__img-wrap
+                    img.house-card__img.js-img-center(src="img/houses/house-1.jpg",alt="ЖК на Толбухіна",title="ЖК на Толбухіна")
+                    .house-card__title-wrap
+                      a(href="#").house-card__title ЖК на Толбухіна
+                else
+                  .ribbon-horiz.ribbon-horiz_green.ribbon-horiz_small У продажу
+                  .house-card__img-wrap
+                    img.house-card__img.js-img-center(src="img/houses/house-2.png",alt="Ревуцького",title="Ревуцького")
+                    .house-card__title-wrap
+                      p.house-card__sup-title Здається у 3 кв. 2017
+                      a(href="#").house-card__title Welcome Home на Ревуцького
+                .house-card__descript-wrap
+                  .house-card__descript
+                    .house-card__descript-col
+                      p.house-card__label Поверхів
+                      p 25
+                      p.house-card__label Площі
+                      p від 34.21 м²
+                    .house-card__descript-col
+                      p.house-card__label Квартири
+                      p Студія–3к
+                      p.house-card__label Ціни
+                      p від 300 500 грн
+                    .house-card__descript-col
+                      p.house-card__metro.metro Позняки
+                      p.house-card__metro.metro Осокорки
+                  a.btn.btn_small(href="#") Детальніше
+                  a.btn.btn_small.btn_red(href="#") Обрати квартиру
+
+      .tabs__content.tabs-red__content
+        #map
+
+
+//script(src="./js/google.map.js").
+//script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBItuYunOjZhdJsHOEt5bmfuNLkbw0FXbg&callback=init")

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="33px" viewBox="0 0 45 33" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 45 (43475) - http://www.bohemiancoding.com/sketch -->
+    <title>:: Pin</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="WelcomeHome_landing" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="WelcomeHome_v12" transform="translate(-432.000000, -2243.000000)" fill="#EB5A2D">
+            <g id="//-Map" transform="translate(0.000000, 1662.000000)">
+                <path d="M453.094968,581.319104 L433.745522,590.665409 C432.669192,591.18582 432,592.233675 432,593.399326 L432,610.386925 C432,612.071229 433.413646,613.441704 435.151007,613.441704 L473.8499,613.441704 C475.587261,613.441704 477,612.071229 477,610.386925 L477,593.399326 C477,592.233675 476.331715,591.18582 475.255385,590.665409 L455.905938,581.319104 C455.465251,581.106368 454.982852,581 454.500453,581 C454.018055,581 453.535656,581.106368 453.094968,581.319104 Z" id="::-Pin"></path>
+            </g>
+        </g>
+    </g>
+</svg>

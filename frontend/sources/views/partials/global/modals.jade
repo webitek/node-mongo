@@ -1,0 +1,55 @@
+#callback-popup.callback-popup
+
+  p.callback-popup__title Замовити дзвінок
+  form.callback-form(action="#")
+    label.callback-form__label.require(for="callback-name") Введіть ваше ім’я
+    input.callback-form__input.required(type="text",id="callback-name",placeholder="Ім’я")
+
+    label.callback-form__label.require(for="callback-phone") Введіть ваш телефон
+    input.callback-form__input.required.js-phone-mask(type="text",id="callback-phone",placeholder="+38 (___) ___-__-__")
+
+    input.callback-form__submit.btn.btn_red(type="submit",value="Замовити дзвінок")
+  .callback-popup_close.popup-close
+
+
+#review-popup.review-popup
+  .review-popup__traingle
+
+  p.review-popup__title Записатись на перегляд
+  form.review-form(action="#")
+
+    .review-form__row
+      .review-form__input-wrap
+        label.review-form__label.require(for="review-name") Введіть ваше ім’я
+        input.review-form__input.required(type="text",id="review-name",placeholder="Ім’я")
+
+      .review-form__input-wrap
+        label.review-form__label(for="review-email") Введіть ваш email
+        input.review-form__input(type="text",id="review-email",placeholder="name@mail.com")
+
+      .review-form__input-wrap
+        label.review-form__label.require(for="review-phone") Введіть ваш телефон
+        input.review-form__input.required.js-phone-mask(type="text",id="review-phone",placeholder="+38 (___) ___-__-__")
+      .review-form__input-wrap
+        label.review-form__label(for="review-time") Зручний час для перегляду
+        .review-form__timepicker-wrap
+          input.review-form__input(type="text",id="review-time",autocomplete="off",placeholder="- -  : - -")
+
+    input.review-form__submit.btn.btn_red(type="submit",value="Записатись")
+  .review-popup_close.popup-close
+
+#reserv-popup.reserv-popup
+
+  p.reserv-popup__title Забронювати
+  form.reserv-form(action="#")
+    label.reserv-form__label.require(for="reserv-name") Введіть ваше ім’я
+    input.reserv-form__input.required(type="text",id="reserv-name",placeholder="Ім’я")
+
+    label.reserv-form__label.require(for="reserv-email") Введіть ваш Email
+    input.reserv-form__input(type="text",id="reserv-email",placeholder="Email")
+
+    label.reserv-form__label.require(for="reserv-phone") Введіть ваш телефон
+    input.reserv-form__input.required.js-phone-mask(type="text",id="reserv-phone",placeholder="+38 (___) ___-__-__")
+
+    input.reserv-form__submit.btn.btn_red(type="submit",value="Забронювати")
+  .reserv-popup_close.popup-close

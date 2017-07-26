@@ -20,7 +20,7 @@ var express = require('express'),
     };
     bannerModel = require('./models/banner');
 
-app.set('views', './views/');
+app.set('views', './views');
 app.set('view engine', 'jade');
 // app.use(express.frontend('frontend'));
 app.use('/frontend', express.static(__dirname + '/frontend'));
@@ -136,7 +136,7 @@ mongoose.connect('mongodb://localhost:27017/welcome',function(err){
     if(err){
         return console.log(err); //если монго не запущенна, то ошибка
     }
-    app.listen(3001, function () {
+    app.listen(3000, function () {
         console.log('API app start');
         // homeModel.find(function (err, doc){
         //     console.log(doc[1].age);

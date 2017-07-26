@@ -1,42 +1,26 @@
+doctype html
+html(lang="en")
+    head
+        include ./partials/global/head
+    body
+        include ./partials/global/sprite
 
-extends layout
-block link
-    -var activePage = 'home';
-block content
-    //h1 index page
-    //span This is Node.js API, with data in MongoDB
-    .main-banner
-        .main-banner__wrap-info
-            span="id: " + doc._id
-            p.main-baner__welcome-text=doc.subTitle
-            h1.main-baner__title=doc.title
-            p.main-baner__chain=doc.supTitle
-        .main-banner__wrap-tel
-            p.main-baner__tel-text=doc.telTitle
-            p.main-baner__tel=doc.tel
+        include ./partials/global/header
 
+        .global-wrap
 
-    br
-    br
-    ///span=doc
-    //p=doc[0].title
-    //span=homeModel
-    br
-    br
-    //ul
-        -for(var i = 0; i<3; i++)
-            li=doc[0][2]
-        //each item, i in doc[0]
-            li=item
-        //- for(var i = 0; i < doc[0].length -1; i++)
-            li=doc[0][i]
-        //for item, i in doc[0]
-            if(i != '_id')
-                li=i
+            include partials/home/001-main-banner
+            include partials/home/002-news-slider
+            include partials/home/003-advantage
+            include partials/home/004-map
+            include partials/home/005-select-flat
+            include partials/home/006-why
+
+            +callback('З радістю відповімо на ваші запитання')
+            include partials/home/008-ideas
+            include partials/global/follow
 
 
-    br
-    br
-    br
-    br
+        include ./partials/global/footer
+
 

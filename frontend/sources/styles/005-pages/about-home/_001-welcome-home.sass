@@ -1,0 +1,66 @@
+.about-banner
+  padding: 70px 0 0
+  &__top-title
+    color: color('red', 1)
+    @include font-size(36)
+    font-weight: $weight-bold
+    line-height: 1.56
+    text-transform: uppercase
+    margin-top: 4px
+  &__title
+    @include font-size(36)
+    font-weight: $weight-bold
+    line-height: 1.25
+    margin-top: 2px
+    max-width: 510px
+  &__text
+    @include font-size(16)
+    font-weight: $weight-medium
+    line-height: 1.69
+    margin: 43px 0 0
+    max-width: 500px
+  &__wrap
+    margin-bottom: 140px
+    &:last-of-type
+      margin-bottom: 105px
+    &:nth-child(odd)
+      flex-direction: row-reverse
+      .about-banner__desc
+        padding-left: 310px
+      .about-banner__img
+        right: auto
+        left: 0
+        transform: translate(-58%, -54%)
+  &__desc
+    position: relative
+    padding-left: 105px
+    padding-top: 122px
+    padding-right: 0
+    width: 100%
+    height: 655px
+    box-shadow: 0 20px 50px rgba(235, 228, 214, 0.5)
+    border-radius: 8px
+    background-color: #ffffff
+    max-width: 908px
+    //margin-bottom: 140px
+  //&__wrap
+    padding-right: 0
+    text-align: right
+    position: relative
+  &__img
+    max-width: 540px
+    position: absolute
+    top: 49%
+    right: 0
+    transform: translate(53%, -50%)
+  &__btn
+    max-width: 240px
+    margin-top: 65px
+  //.row:nth-child(even)
+    flex-direction: row-reverse
+    .about-banner__desc
+      padding-left: 310px
+    .about-banner__img
+      right: auto
+      left: 0
+      transform: translate(-58%, -54%)

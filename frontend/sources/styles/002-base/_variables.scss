@@ -12,35 +12,40 @@
 // color: color('grey');
 
 $colors: (
+	'black': (
+		1: #333333
+	),
 	'grey': (
-		1: #9a9a9a, // .t_color--grey-1
-		2: #333433, // .t_color--grey-2
-		3: #262726, // .t_color--grey-3
-		4: #888888  // .t_color--grey-4
+		1: #626261 ,
+		2: #bfbfbf
+	),
+	'cream': (
+		1: #F8F2E5
 	),
 
 	'red': (
-
+		1: #eb5a2d,	//hover
+		2: #d1532c //brend hover
 	),
 
 	'blue': (
-		1: #1186c0 // .t_color--blue-1
+		//1: #1186c0 // .t_color--blue-1
 	),
 
 	'green': (
-		1: #1ac604 // .t_color--green-1
+		//1: #1ac604 // .t_color--green-1
 	)
 );
 
 
-$grad-green: linear-gradient(135deg, #0c0 0%, #3c9 100%);
-$grad-blue: linear-gradient(135deg, #0099cc 0%, #0066cc 100%);
-$grad-red: linear-gradient(113deg, #cc0000, #ff6600);
-$grad-gray: linear-gradient(113deg, #999999, #666666);
+//$grad-green: linear-gradient(135deg, #0c0 0%, #3c9 100%);
+//$grad-blue: linear-gradient(135deg, #0099cc 0%, #0066cc 100%);
+//$grad-red: linear-gradient(113deg, #cc0000, #ff6600);
+//$grad-gray: linear-gradient(113deg, #999999, #666666);
 //-------------------------------------------------
 // Fonts
 
-$HelveticaNeueBold: "HelveticaBold", Helvetica, Arial, sans-serif;
+$Geometria: "Geometria", Arial, sans-serif;
 
 $weight-thin: 100;
 $weight-light: 300;

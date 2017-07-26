@@ -99,7 +99,7 @@ img,
 picture { @extend .l_show-block; height: auto; }
 
 button,
-input[type="submit"],
+input,
 textarea {
 	background: inherit;
 	border: 0;

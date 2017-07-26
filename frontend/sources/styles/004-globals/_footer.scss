@@ -1,0 +1,80 @@
+.footer{
+   background: #ffffff;
+   padding: 35px 0 0;
+   margin: 50px 0 0;
+   &__wrap{
+     justify-content: space-between;
+   }
+   &__list{
+     padding: 68px 0 0;
+     flex: 0 1 15%;
+     &-item{
+       padding: 11px 0;
+       transition: $transition-time;
+       &:hover{
+         opacity: .7;
+       }
+     }
+     &-title{
+       font-weight: $weight-bold;
+     }
+     &-more{
+
+       padding-top: 12px;
+       display: block;
+       box-shadow: 0px -15px 15px 10px rgba(255,255,255,.8);
+       position: relative;
+       z-index: 1;
+       &>span{
+         border-bottom: 1px dashed color('red', 1);
+         color: color('red', 1);
+         transition: $transition-time;
+       }
+       &:hover{
+         span{
+           border-color: transparent;
+         }
+       }
+     }
+   }
+
+   &__logo{
+     @extend .i-footer-logo;
+     padding: 182px 0 0;
+     text-align: center;
+     color: #ffffff;
+     @include font-size(16);
+     @extend .l_show-flex;
+     @extend .l_flex-direction--column;
+   }
+   &__logo-text{
+     letter-spacing: 1px;
+   }
+   &__logo-tel{
+     padding: 17px 0;
+   }
+   &__logo-email{}
+
+   &__link-up{
+     width: 100px;
+     height: 100px;
+     box-shadow: 0 20px 50px rgba(235, 228, 214, 0.5);
+     background-color: #ffffff;
+     border-radius: 100%;
+     position: absolute;
+     right: 0;
+     top: -85px;
+     @extend .l_show-flex;
+     @extend .l_flex-direction--column;
+     @extend .l_justify-content--center;
+     @extend .l_align-items--center;
+     //@include font-size(16);
+     &-icon{
+       transform: rotate(-90deg);
+     }
+   }
+  ul{
+    max-height: 140px;
+    overflow: hidden;
+  }
+ }

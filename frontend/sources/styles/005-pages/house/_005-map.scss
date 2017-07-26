@@ -1,0 +1,17 @@
+.house-map{
+  margin: 60px 0 150px;
+  &__title{
+    @extend .t_h1;
+    text-align: center;
+  }
+  &-marker{
+    position: relative;
+    top: 50px;
+    left: 130px;
+    &__address{
+      color: color('red', 1);
+      @include font-size(24);
+      font-weight: 700;
+    }
+  }
+}

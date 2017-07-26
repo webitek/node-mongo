@@ -1,5 +1,3 @@
-- var page = 'home';
-
 doctype html
 html(lang="en")
     head
@@ -9,8 +7,20 @@ html(lang="en")
 
         include ./partials/global/header
 
-        include ./partials/home/001-hero
+        .global-wrap
+
+            include partials/home/001-main-banner
+            include partials/home/002-news-slider
+            include partials/home/003-advantage
+            include partials/home/004-map
+            include partials/home/005-select-flat
+            include partials/home/006-why
+
+            +callback('З радістю відповімо на ваші запитання')
+            include partials/home/008-ideas
+            include partials/global/follow
 
 
         include ./partials/global/footer
+
 

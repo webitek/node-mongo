@@ -1,0 +1,48 @@
+
+.info-house{
+  display: flex;
+  padding: 60px 90px 35px;
+  &__list{
+    width: calc(100% - 285px);
+    &-item{
+      color: #3b3a52;
+      @include font-size(24);
+      position: relative;
+      padding: 0 0 15px 53px;
+      &:before{
+        content: '';
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        left: 4px;
+        top: 12px;
+        border-radius: 100%;
+        background-color: color('red', 1);
+      }
+    }
+  }
+  &__metro{
+    width: 320px;
+    &-item{
+      display: flex;
+      @include font-size(24);
+      margin: 0 0 15px;
+      .metro{
+        width: 205px;
+      }
+    }
+    &-distance{
+      align-self: flex-end;
+      color: #2d2b41;
+    }
+  }
+}
+
+.info-btns{
+  display: flex;
+  align-items: center;
+  padding: 0 145px 50px;
+  .btn_medium{
+    margin-right: 30px;
+  }
+}

@@ -1,0 +1,14 @@
+-var descript = ["Раціональне зберігання речей", "Як організувати ванну вашої мрії", "Продумуємо вашу гардеробну"];
+
+section.ideas
+  .container
+    p.ideas__title Ідеї комфорту
+    p.ideas__sub-title Корисні матеріали по облаштуванню вашої квартир, надихаючі ідеї та поради від дизайн експертів
+    .row.ideas__block
+      -for(var i = 0; i < 3; i++)
+        .ideas__item
+          a.ideas__item-link(href="#")
+            img.ideas__item-img(src="img/ideas-" + (i+1) + ".png")
+            .ideas__item-descript
+              p=descript[i]
+    a(href="#").ideas__btn.btn.btn_large Переглянути всі

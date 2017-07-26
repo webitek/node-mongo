@@ -1,0 +1,26 @@
+.select-flat-block{
+  &>.container{
+    background: #ffffff;
+    box-shadow: 0 20px 50px #ebe4d6;
+    border-radius: 8px;
+  }
+
+  .select-flat{
+    border-radius: 0;
+  }
+  &__title{
+    @extend .t_h1;
+    text-align: center;
+    margin: 0;
+    padding: 60px 0 0;
+  }
+
+  .tabs-red{
+    &__caption{
+      margin: 25px auto 7px;
+    }
+    &__content{
+      margin: 0;
+    }
+  }
+}

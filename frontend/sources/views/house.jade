@@ -1,0 +1,29 @@
+- var page = 'home';
+
+doctype html
+html(lang="en")
+  head
+    include ./partials/global/head
+  body
+    include ./partials/global/sprite
+
+    include ./partials/global/header
+
+    .global-wrap
+
+      include partials/house/001-main-block
+      include partials/house/002-info-tab
+      include partials/house/003-advantage
+      include partials/house/004-plan
+      include partials/house/005-map
+      include partials/house/006-select-flat
+      //include partials/house/_007-result-filter
+      include partials/house/008-commerce
+      +callback('З радістю відповімо на ваші запитання')
+      include partials/house/009-building
+      include partials/house/010-other-house
+      include partials/global/follow
+
+    include ./partials/global/footer
+
+

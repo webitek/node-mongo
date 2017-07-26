@@ -1,0 +1,12 @@
+-var aboutDesc = ["Фотогалерея", "Веб-камера"];
+section.ideas.building
+  .container
+    p.ideas__title Хід будівництва
+    p.ideas__sub-title Слідкуйте за будівництвом будинку через галерею або пряму трансляцію
+    .row.ideas__block
+      -for(var i = 0; i < 2; i++)
+        .ideas__item
+          a.ideas__item-link(href="#")
+            img.ideas__item-img(src="img/house/build-" + (i + 1) + ".png")
+            .ideas__item-descript
+              p=aboutDesc[i]

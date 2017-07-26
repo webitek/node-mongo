@@ -1,0 +1,79 @@
+/* Slider */
+
+.slick-slider {
+    position: relative;
+    @extend .l_show-block;
+    box-sizing: border-box;
+    -webkit-touch-callout: none;
+    user-select: none;
+    -ms-touch-action: pan-y;
+    touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+.slick-list {
+    position: relative;
+    overflow: hidden;
+    @extend .l_show-block;
+    margin: 0;
+    padding: 0;
+
+    &:focus {
+        outline: none;
+    }
+
+    &.dragging {
+        cursor: pointer;
+        cursor: hand;
+    }
+}
+.slick-slider .slick-track,
+.slick-slider .slick-list {
+    transform: translate3d(0, 0, 0);
+}
+
+.slick-track {
+    position: relative;
+    left: 0;
+    top: 0;
+    @extend .l_show-block;
+
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+
+    .slick-loading & {
+        visibility: hidden;
+    }
+}
+.slick-slide {
+    float: left;
+    height: 100%;
+    min-height: 1px;
+    outline: none;
+    @extend .l_hide;
+
+    [dir="rtl"] & {
+        float: right;
+    }
+    img {
+        @extend .l_show-block;
+    }
+    &.slick-loading img {
+        @extend .l_hide;
+    }
+    &.dragging img {
+        pointer-events: none;
+    }
+    .slick-initialized & {
+        @extend .l_show-block;
+    }
+    .slick-loading & {
+        visibility: hidden;
+    }
+}

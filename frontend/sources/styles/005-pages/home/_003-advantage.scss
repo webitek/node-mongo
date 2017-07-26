@@ -1,0 +1,35 @@
+.advantage{
+  @extend .t_text-align--center;
+  padding: 90px 0;
+  
+  &__title{
+    //@extend .t_h1;
+    margin-bottom: 0;
+  }
+  &__sup-title{
+    margin-top: 12px;
+  }
+
+  &__item{
+    &-img-wrap{
+      height: 185px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 0 0;
+    }
+    &-img{
+      max-height: 100%;
+    }
+    &-text{
+      @include font-size(16);
+      max-width: 220px;
+      line-height: 1.5;
+      margin: 12px auto;
+    }
+  }
+
+  &__link{
+    margin: 39px auto 0;
+  }
+}

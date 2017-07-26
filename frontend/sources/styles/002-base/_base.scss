@@ -2,7 +2,35 @@
 // BASE
 //-----------------------------------------------------------
 body {
-	background: white;
-	font-family: $HelveticaNeueBold;
-	overflow-x: hidden;
+	font-family: $Geometria;
+	//overflow-x: hidden;
+	font-weight: $weight-medium;
+	color: color('black', 1);
+	background: color('cream', 1);
+	@include font-size(20);
+
+	min-width: 1200px !important;
+}
+.global-wrap{
+	margin-top: 100px;
+}
+
+.container {
+	width: 1200px !important;
+}
+
+.over-hidden{
+	overflow: hidden;
+}
+
+.js-img-center{
+	opacity: 0;
+	transition: $transition-time;
+	&.done{
+		opacity: 1;
+	}
+}
+
+.full-options{
+	display: none!important;
 }

@@ -1,0 +1,76 @@
+.result-filter{
+   &__wrap{
+     width: 100%;
+     background: #ffffff;
+     padding: 0 30px 20px;
+     margin-top: -7px;
+   }
+   &__table{
+     width: 100%;
+     text-align: center;
+     .i-arrow-right{
+       display: block;
+     }
+     th{
+       padding: 20px 15px;
+       &:first-of-type{
+         padding-left: 0px;
+       }
+       &:nth-child(7){
+         padding-left: 60px;
+       }
+     }
+     td{
+       padding: 30px 15px 25px;
+       &:first-of-type{
+         padding-left: 17px;
+         @include font-size(16);
+       }
+       &:last-of-type{
+         padding: 20px;
+       }
+       &:nth-child(7){
+         padding-right: 30px;
+       }
+     }
+     thead{
+       border-bottom: 3px solid #eee8db;
+     }
+     tbody{
+       tr{
+         &:nth-child(even){
+           background: #f9f8f4;
+         }
+       }
+     }
+   }
+   &__btn-more{
+     margin: 30px auto;
+   }
+   .on-sale{
+     display: flex;
+     align-items: center;
+     &:before{
+       content: '';
+       display: block;
+       width: 10px;
+       height: 10px;
+       margin-right: 8px;
+       border-radius: 100%;
+       background: #22b65d;
+     }
+   }
+   .booked{
+     display: flex;
+     align-items: center;
+     &:before{
+       content: '';
+       display: block;
+       width: 10px;
+       height: 10px;
+       margin-right: 8px;
+       border-radius: 100%;
+       background: #ebc82d;
+     }
+   }
+ }

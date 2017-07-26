@@ -1,0 +1,36 @@
+section.main-banner
+  p.main-banner__title Ласкаво просимо додому
+  .main-banner__watch
+    a.video-popup_open(href="#")
+      .main-banner__watch-icon.play-icon
+      p Дивитись відео про WELCOME HOME
+
+
+    //iframe(width='800', height='400', src='https://www.youtube.com/embed/JGwWNGJdvx8?list=RDQMzKzh5mnfz5c', frameborder='0', allowfullscreen='')
+    //iframe#video(src='//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1&html5=1', frameborder='0', allowfullscreen='')
+
+
+#video-popup
+  .popup-close.video-popup_close#pause-button
+  iframe#video(width='800', height='400', src='//www.youtube.com/embed/FKWwdQu6_ok?enablejsapi=1&html5=1', frameborder='0', allowfullscreen='')
+
+  script.
+      var player;
+      function onYouTubePlayerAPIReady() {
+          player = new YT.Player('video', {
+              events: {
+                  'onReady': onPlayerReady
+              }
+          });
+      }
+
+      function onPlayerReady(event) {
+          var pauseButtonWrapper = document.getElementById("video-popup_wrapper");
+          var pauseButton = document.getElementById("pause-button");
+          pauseButton.addEventListener("click", function () { player.pauseVideo(); });
+          pauseButtonWrapper.addEventListener("click", function () { player.pauseVideo(); });
+      }
+      var tag = document.createElement('script');
+      tag.src = "//www.youtube.com/player_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
