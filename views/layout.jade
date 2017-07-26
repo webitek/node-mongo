@@ -11,7 +11,7 @@ html(lang='ru')
         meta(charset='UTF-8')
         meta(http-equiv='X-UA-Compatible', content='IE=edge')
         meta(name='viewport', content='width=device-width, initial-scale=1')
-        link(rel='stylesheet', href='/style.css')
+        link(rel='stylesheet', href='frontend/css/style.css')
         title= title
     body
         nav
@@ -45,4 +45,23 @@ html(lang='ru')
                 li
                     a(href="/sdf") 404
         .main-content
+            section.post
+                p insert banner data
+                form(action="/insert", method="post")
+                    .input
+                        label(for='subTitle') subTitle
+                        input#subTitle(type='text', name='subTitle')
+                    .input
+                        label(for='title') Title
+                        input#title(type='text', name='title')
+                    .input
+                        label(for='supTitle') supTitle
+                        input#supTitle(type='text', name='supTitle')
+                    .input
+                        label(for='telTitle') telTitle
+                        input#telTitle(type='text', name='telTitle')
+                    .input
+                        label(for='tel') tel
+                        input#tel(type='tel', name='tel')
+                    button(type='submit') post
             block content

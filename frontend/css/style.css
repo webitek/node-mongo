@@ -49,3 +49,34 @@ body {
     margin: 0;
     padding: 5px 0;
 }
+
+
+.main-banner {
+    /*background-size: cover;*/
+    /*background-position: top center;*/
+    /*background-repeat: no-repeat;*/
+    /*background-image: url(../img/hero/1.jpg);*/
+    background: #8c8c8c;
+    text-align: center;
+    position: relative;
+    color: #ffffff;
+}
+.main-baner__welcome-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+.main-baner__chain {
+    line-height: 1.25;
+    font-weight: 500;
+    max-width: 390px;
+    margin: 0 auto;
+}
+.main-baner__tel-text {
+    font-size: 18px;
+    font-weight: 500;
+}
+.main-baner__tel {
+    font-size: 20px;
+    color: #f8f8f8;
+    font-weight: 700;
+}

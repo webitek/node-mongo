@@ -5,10 +5,8 @@ var express = require('express'),
     // MongoClient = require('mongodb').MongoClient,
     // ObjectID = require('mongodb').ObjectID,
     // db = require('./db'),
-    artistsController = require('./controllers/artists'),
 
     mongoose = require('mongoose'),
-    //Schema = mongoose.Schema,
 
     io = require('socket.io')(http),
     pages = require('./data/pages.json'),
@@ -19,13 +17,15 @@ var express = require('express'),
     nav = {
         pages: pages,
         posts: posts
-    },
-    homeModel = require('./models/banner');
+    };
+    bannerModel = require('./models/banner');
 
 app.set('views', './views/');
 app.set('view engine', 'jade');
-app.use(express.static('public'));
+// app.use(express.frontend('frontend'));
+app.use('/frontend', express.static(__dirname + '/frontend'));
 app.use(bodyParser.urlencoded({ extended: true }));//для работы с POST
+
 
 
 
@@ -34,30 +34,51 @@ app.post('/blog', function(req, res) {
     res.redirect('index');
 });
 
-// app.get('/', artistsController.all);
 app.get('/', function (req, res) {
-    /*
-    homeModel.find(function(err, elem) {
-        // console.log(elem[0].name);
-        console.log(elem);
-
-
-        res.render('index', {
-            title: 'API',
-            nav: nav,
-            elem: elem,
-        });
-    });
-    */
-    homeModel.find(function (err, doc){
+    bannerModel.find(function (err, doc){
         // console.log(doc[0].photo);
         res.render('index', {
             title: 'API',
             nav: nav,
-            doc: doc
+            doc: doc[0]
         });
+        // console.log(doc);
     });
+
 });
+
+app.post('/insert', function(req, res, next) {
+    var item = {
+        subTitle: req.body.subTitle,
+        title: req.body.title,
+        supTitle: req.body.supTitle,
+        telTitle: req.body.telTitle,
+        tel: req.body.tel
+    };
+
+    var data = new bannerModel(item);
+    data.save();
+
+    res.redirect('/');
+});
+
+// app.post('/update', function(req, res, next) {
+//     var id = req.body.id;
+//
+//     bannerModel.findById(id, function(err, doc) {
+//         if (err) {
+//             console.error('error, no entry found');
+//         }
+//         doc.subTitle = req.body.subTitle;
+//         doc.title = req.body.title;
+//         doc.supTitle = req.body.supTitle;
+//         doc.telTitle = req.body.telTitle;
+//         doc.tel = req.body.tel;
+//
+//         doc.save();
+//     });
+//     res.redirect('/');
+// });
 
 
 
@@ -111,7 +132,7 @@ app.use(function(req, res) {
 // http.listen(3001, function(){
 //     console.log('Listen 3001 port');
 // });
-mongoose.connect('mongodb://localhost:27017/myapi',function(err){
+mongoose.connect('mongodb://localhost:27017/welcome',function(err){
     if(err){
         return console.log(err); //если монго не запущенна, то ошибка
     }
