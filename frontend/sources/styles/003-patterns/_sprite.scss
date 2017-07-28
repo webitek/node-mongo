@@ -1,60 +1,18 @@
 %svg-common {
-	background: url("svg-sprite-8a9f3001.svg") no-repeat;
-}
-
-.i-arrow-black {
-	@extend %svg-common;
-	background-position: 0 0;
-	width: 11.44px;
-	height: 18px;
-}
-
-.i-arrow-right {
-	@extend %svg-common;
-	background-position: 0 3.2200357781753133%;
-	width: 22px;
-	height: 20px;
-}
-
-.i-arrow_down_double {
-	@extend %svg-common;
-	background-position: 0 6.871609403254973%;
-	width: 29px;
-	height: 26px;
-}
-
-.i-call-back {
-	@extend %svg-common;
-	background-position: 0 12.098298676748582%;
-	width: 50px;
-	height: 50px;
-}
-
-.i-cheked {
-	@extend %svg-common;
-	background-position: 0 20.24866785079929%;
-	width: 15px;
-	height: 16px;
+	background: url("svg-sprite-168fc97b.svg") no-repeat;
 }
 
 .i-footer-logo {
 	@extend %svg-common;
-	background-position: 0 53.278688524590166%;
+	background-position: 0 0;
 	width: 293px;
 	height: 335px;
 }
 
-.i-logo {
-	@extend %svg-common;
-	background-position: 0 97.07724425887265%;
-	width: 141px;
-	height: 100px;
-}
-
-.i-metro_green {
+.i-twitter {
 	@extend %svg-common;
 	background-position: 0 100%;
-	width: 21px;
-	height: 14px;
+	width: 32px;
+	height: 32px;
 }
 

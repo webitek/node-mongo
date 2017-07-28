@@ -7,30 +7,30 @@ block content
     //span This is Node.js API, with data in MongoDB
     .main-banner
         .main-banner__wrap-info
-            span="id: " + doc._id
-            p.main-baner__welcome-text=doc.subTitle
-            h1.main-baner__title=doc.title
-            p.main-baner__chain=doc.supTitle
+            span="id: " + banner._id
+            p.main-baner__welcome-text=banner.subTitle
+            h1.main-baner__title=banner.title
+            p.main-baner__chain=banner.supTitle
         .main-banner__wrap-tel
-            p.main-baner__tel-text=doc.telTitle
-            p.main-baner__tel=doc.tel
+            p.main-baner__tel-text=banner.telTitle
+            p.main-baner__tel=banner.tel
 
 
     br
     br
-    ///span=doc
-    //p=doc[0].title
+    ///span=banner
+    //p=banner[0].title
     //span=homeModel
     br
     br
     //ul
         -for(var i = 0; i<3; i++)
-            li=doc[0][2]
-        //each item, i in doc[0]
+            li=banner[0][2]
+        //each item, i in banner[0]
             li=item
-        //- for(var i = 0; i < doc[0].length -1; i++)
-            li=doc[0][i]
-        //for item, i in doc[0]
+        //- for(var i = 0; i < banner[0].length -1; i++)
+            li=banner[0][i]
+        //for item, i in banner[0]
             if(i != '_id')
                 li=i
 

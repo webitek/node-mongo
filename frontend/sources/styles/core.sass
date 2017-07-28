@@ -2,30 +2,37 @@
 // KICKSTART (USED ON EVERY PROJECT)
 //-----------------------------------------------------------
 
-@import "001-kickstart/_helpers.scss"              // reset + standard helper classes
-@import "001-kickstart/_mixins.scss"               // common mixins
+@import "001-kickstart/_helpers"
+// reset + standard helper classes
+@import "001-kickstart/_mixins"
+// common mixins
 
 //-----------------------------------------------------------
 // LIBS
 //-----------------------------------------------------------
 
-@import "008-libs/bootstrap/bootstrap-grid"         // styles that need to be refactored, or that are hacky because of browser compatibility etc.
-@import "008-libs/slick"                            // slider
-@import "008-libs/jquery-ui.min.css"                // ui range-slider
-@import "008-libs/jquery.timepicker.css"            // timepicker
+@import "008-libs/bootstrap/bootstrap-grid"                           // styles that need to be refactored, or that are hacky because of browser compatibility etc.
+@import "008-libs/slick/slick.css"                  //slick
 
 
 //-----------------------------------------------------------
 // PROJECT BASE
 //-----------------------------------------------------------
 
-@import "002-base/_fonts.scss"                     // @font-face declarations
-@import "002-base/_variables.scss"                 // color, font, breakpoint variables, etc
-@import "002-base/_base.scss"                      // base styles for project
-@import "002-base/_layout.scss"                    // useful layout styles
-@import "002-base/_typography.scss"                // type styles for project
-@import "002-base/_utilities.scss"                 // misc reusables - small chunks as opposed to entire sections like modules
-@import "002-base/_grid.scss"                      // grid
+@import "002-base/_fonts"
+// @font-face declarations
+@import "002-base/_variables"
+// color, font, breakpoint variables, etc
+@import "002-base/_base"
+// base styles for project
+@import "002-base/_layout"
+// useful layout styles
+@import "002-base/_typography"
+// type styles for project
+@import "002-base/_utilities"
+// misc reusables - small chunks as opposed to entire sections like modules
+@import "002-base/_grid"
+// grid
 
 //-----------------------------------------------------------
 // PATTERNS
@@ -44,11 +51,6 @@
 
 @import "005-pages/common/_common"                  // common
 @import "005-pages/home/home"                       // home
-@import "005-pages/about-home/about-home"           // about
-@import "005-pages/houses/houses"                   // houses
-@import "005-pages/house/house"                     // house
-@import "005-pages/contacts/contacts"               // contacts
-@import "005-pages/404/404"                         // contacts
 
 //-----------------------------------------------------------
 // THIRD PARTY STYLES

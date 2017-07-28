@@ -1,0 +1,16 @@
+.credit
+    p.credit__title Кредит на квартиру
+    p.credit__text="від "
+        span.credit__rate="1,9% "
+        | до
+        span.credit__rate=" 20 "
+        | років
+
+.sign-up
+    p.sign-up__title Запишіться на перегляд вже зараз:
+    p.sign-up__tel (044) 33 99 677
+    form.news-form(action="#")
+        .news-form__email-wrap
+            input.news-form__email.required(type="email", id="email",placeholder="введіть ваш email")
+            label.news-form__email-label(for="email")
+        input.news-form__submit.submit(type="submit", value="Тримайте в курсі новин")

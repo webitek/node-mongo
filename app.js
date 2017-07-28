@@ -29,10 +29,10 @@ app.use(bodyParser.urlencoded({ extended: true }));//для работы с POST
 
 
 
-app.post('/blog', function(req, res) {
-    console.log(req.body.comment);
-    res.redirect('index');
-});
+// app.post('/blog', function(req, res) {
+//     console.log(req.body.comment);
+//     res.redirect('index');
+// });
 
 app.get('/', function (req, res) {
     bannerModel.find(function (err, doc){
@@ -40,7 +40,7 @@ app.get('/', function (req, res) {
         res.render('index', {
             title: 'API',
             nav: nav,
-            doc: doc[0]
+            banner: doc[0]
         });
         // console.log(doc);
     });
@@ -136,7 +136,7 @@ mongoose.connect('mongodb://localhost:27017/welcome',function(err){
     if(err){
         return console.log(err); //если монго не запущенна, то ошибка
     }
-    app.listen(3000, function () {
+    app.listen(4000, function () {
         console.log('API app start');
         // homeModel.find(function (err, doc){
         //     console.log(doc[1].age);

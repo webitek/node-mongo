@@ -1,26 +1,18 @@
+- var page = 'home';
+
 doctype html
 html(lang="en")
     head
         include ./partials/global/head
     body
         include ./partials/global/sprite
-
         include ./partials/global/header
 
-        .global-wrap
-
-            include partials/home/001-main-banner
-            include partials/home/002-news-slider
-            include partials/home/003-advantage
-            include partials/home/004-map
-            include partials/home/005-select-flat
-            include partials/home/006-why
-
-            +callback('З радістю відповімо на ваші запитання')
-            include partials/home/008-ideas
-            include partials/global/follow
+        include ./partials/home/001-section
+        include ./partials/home/002-slider
+        include ./partials/home/003-map
+        include ./partials/home/004-info&form
 
 
         include ./partials/global/footer
-
 

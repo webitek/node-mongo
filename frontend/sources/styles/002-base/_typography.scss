@@ -2,13 +2,10 @@ a {
 	text-decoration: none;
 	color: inherit;
 	transition: all $transition-time;
-	outline: none;
-	will-change: opacity;
 }
 h1,
 .t_h1 {
 	@include font-size(36);
-	font-weight: $weight-bold;
 }
 h2,
 .t_h2 {
@@ -43,9 +40,8 @@ h6,
 .font-size-24{
 	@include font-size(24);
 }
-
-.font-size-72{
-	@include font-size(72);
+.font-size-40{
+	@include font-size(40);
 }
 
 .t_color--white { color: white; }

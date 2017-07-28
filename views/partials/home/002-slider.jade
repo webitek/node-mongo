@@ -1,0 +1,9 @@
+-
+    var slideText = ['Круто, якщо еколавка в кожному будинку.','Безпечно, якщо камера в кожному подъезде','Кльово, якщо будинок енергоейективний']
+
+section.welcome-slider-wrap
+    .welcome-slider
+        -for(var i = 1; i < 4; i++)
+            div.welcome-slider__item
+                img(src="../../../frontend/img/welcome-slide" + i + "-2x.png",title="title")
+                p.welcome-slider__item-text=slideText[i -1]

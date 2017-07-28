@@ -1,0 +1,53 @@
+.main-baner{
+  @extend .t_text-align--center;
+  @include background-settings;
+
+  text-align: center;
+  background-image: url("../img/main-baner-bg.jpg");
+  position: relative;
+  color: #ffffff;
+  &:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: $grad-black;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    opacity: .4;
+  }
+
+  &__wrap-info{
+    position: relative;
+    z-index: 2;
+  }
+  &__wrap-tel{
+    position: relative;
+    z-index: 2;
+  }
+
+  &__welcome-text{
+    font-weight: $weight-medium;
+  }
+  &__welcome-logo{
+    width: 100%;
+    margin: 30px auto 29px;
+  }
+  &__chain{
+    @include line-height(30,24);
+    font-weight: $weight-medium;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  &__tel-text{
+    font-weight: $weight-medium;
+  }
+  &__tel{
+    padding: 10px 0 30px;
+    color: #f8f8f8;
+    font-weight: $weight-bold;
+    display: block;
+  }
+}

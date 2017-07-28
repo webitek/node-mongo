@@ -69,12 +69,7 @@ gulp.task('img', function() {
 gulp.task('libs', function() {
     return gulp.src([ // Берем все необходимые библиотеки
         './frontend/sources/libs/jquery-2.2.4.min.js',
-        './frontend/sources/libs/img-center.js',
-        './frontend/sources/libs/slick.js',
-        './frontend/sources/libs/jquery-ui.min.js',
-        './frontend/sources/libs/jquery.popupoverlay.js',
-        './frontend/sources/libs/jquery.mask.js',
-        './frontend/sources/libs/jquery.timepicker.min.js'
+        './frontend/sources/libs/slick.js'
     ])
         .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
         .pipe(uglify()) // Сжимаем JS файл

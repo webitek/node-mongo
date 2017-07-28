@@ -62,9 +62,9 @@ table {
 	border-spacing: 0;
 }
 p {
-	margin: 1em auto;
-	&:first-child { margin-top: 0; }
-	&:last-child { margin-bottom: 0; }
+	//margin: 1em auto;
+	//&:first-child { margin-top: 0; }
+	//&:last-child { margin-bottom: 0; }
 }
 
 b,strong {
@@ -99,7 +99,7 @@ img,
 picture { @extend .l_show-block; height: auto; }
 
 button,
-input,
+input[type="submit"],
 textarea {
 	background: inherit;
 	border: 0;

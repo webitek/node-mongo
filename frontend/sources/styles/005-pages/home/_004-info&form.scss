@@ -1,0 +1,35 @@
+.credit{
+  background: color('red', 1);
+  padding: 35px 20px 40px;
+  color: #ffffff;
+  font-weight: $weight-bold;
+  text-align: center;
+  &__title{
+    @include font-size(24);
+  }
+  &__text{
+    @include font-size(18);
+    padding: 12px 0 0;
+  }
+  &__rate{
+    @include font-size(40);
+  }
+}
+
+.sign-up{
+  text-align: center;
+  padding: 37px 20px 40px;
+  &__title{
+    color: color('black', 1);
+    font-weight: $weight-medium;
+  }
+  &__tel{
+    color: color('black', 1);
+    @include font-size(32);
+    font-weight: $weight-bold;
+    padding: 10px 0 22px;
+    display: block;
+  }
+  &__form{}
+}
+

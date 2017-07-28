@@ -1,0 +1,39 @@
+.welcome-slider{
+  width: 700px;
+  margin: 0 auto;
+  &-wrap{
+    background: color('yellow', 1);
+  }
+  &__item{
+    position: relative;
+    &-text{
+      position: absolute;
+      top: 115px;
+      left: 340px;
+      @include font-size(35);
+      color: color('red', 1);
+      font-weight: $weight-bold;
+    }
+  }
+  .slick-slide{
+    img{
+      margin:0 auto;
+    }
+  }
+  .slick-arrow{
+    width: 26px;
+    height: 60px;
+    background: url("../img/arrow.svg") no-repeat;
+    background-size: 100% 100%;
+    @extend .u_overlay;
+    margin: auto;
+    z-index: 1;
+    transition: $transition-time;
+    &:hover{
+      opacity: .6;
+    }
+    &.slick-disabled{
+      opacity: .3;
+    }
+  }
+}
